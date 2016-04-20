@@ -3,6 +3,8 @@ from scrapy.item import Item, Field
 
 class Website(Item):
 
-    name = Field()
-    description = Field()
-    url = Field()
+    # name = Field()
+    # description = Field()
+    # url = Field()
+    key = Field()
+    value = Field()
