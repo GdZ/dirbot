@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 from scrapy.spiders import Spider
 from scrapy.selector import Selector
+from dirbot.spiders.model.filter import MYBB_FILTER as mybb_filter
 
 from dirbot.items import Website
-
-
 
 class MybbSpider(Spider):
     name = "mybb"
@@ -22,16 +21,6 @@ class MybbSpider(Spider):
         @scrapes name
         """
         sel = Selector(response)
-        sites = sel.xpath('//ul[@class="clearfix"]/li')
-        items = []
-
-        for site in sites:
-            item = Website()
-            # item['name'] = site.xpath('a/text()').extract()
-            # item['url'] = site.xpath('a/@href').extract()
-            # item['description'] = site.xpath('text()').re('-\s[^\n]*\\r')
-            item['key'] = site.xpath('b/text()').extract()
-            item['value'] = site.xpath('text()').extract()
-            items.append(item)
+        items = mybb_filter(sel).items
 
         return items
