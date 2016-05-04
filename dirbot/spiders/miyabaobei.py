@@ -3,7 +3,8 @@ from scrapy.spiders import Spider
 from scrapy.selector import Selector
 from dirbot.spiders.model.filter import MYBB_FILTER as mybb_filter
 
-from dirbot.items import Website
+import scrapy
+import scrapy.log as Log
 
 class MybbSpider(Spider):
     name = "mybb"
@@ -20,7 +21,9 @@ class MybbSpider(Spider):
         @url http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/
         @scrapes name
         """
-        sel = Selector(response)
-        items = mybb_filter(sel).items
+
+        selector = Selector(response)
+        Log.logger.debug("create filter..........")
+        items = mybb_filter(selector).arrays
 
         return items
