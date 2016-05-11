@@ -3,9 +3,11 @@ from scrapy.item import Item, Field
 
 class Website(Item):
 
-    # name = Field()
-    # description = Field()
-    # url = Field()
+    name = Field()
+    description = Field()
+    url = Field()
+
+    """
     ## breadCrumbs
     breadCrumbs_a_ctx = Field()
     breadCrumbs_a_href = Field()
@@ -41,3 +43,4 @@ class Website(Item):
     ## big rel
     key = Field()
     value = Field()
+    """
