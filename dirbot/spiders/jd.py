@@ -24,17 +24,33 @@ class jdSpider(Spider):
         """
         sel = Selector(response)
         # sites = sel.xpath('//ul[@class="directory-url"]/li')
-        sites = sel.xpath(self.rules.filters['root']['0'])
+       # sites = sel.xpath(self.rules.filters['root']['0'])
+        bodies= sel.xpath(self.rules.filters['body']['0'])
+
         items = []
 
-        for site in sites:
+        for body in bodies:
             item = Website()
             # item['name'] = site.xpath('a/text()').extract()
-            item['pname'] = site.xpath(self.rules.filters['pname']['0']).extract()
-            item['pID'] = site.xpath(self.rules.filters['url']['0']).extract()
-            item['description'] = site.xpath(self.rules.filters['description']['0'])\
-                .re(self.rules.filters['description']['1'])
+            item['root_nav'] = body.xpath(self.rules.filters['root_nav']['0']).extract()
+            item['fenlie'] = body.xpath(self.rules.filters['fenlie']['0']).extract()
+            item['fenglie2'] =body.xpath(self.rules.filters['fenglie2']['0']).extract()
+            item['root_nav'] = body.xpath(self.rules.filters['root_nav']['0']).extract()
+            item['fenlie'] = body.xpath(self.rules.filters['fenlie']['0']).extract()
+            item['fenglie2'] = body.xpath(self.rules.filters['fenglie2']['0']).extract()
+            item['product_intro'] = body.xpath(self.rules.filters['product_intro']['0']).extract()
+            item['spec_n1'] = body.xpath(self.rules.filters['spec_n1']['0']).extract()
+            item['p_ad'] = body.xpath(self.rules.filters['p_ad']['0']).extract()
+            item['jd_price'] = body.xpath(self.rules.filters['jd_price']['0']).extract()
+            item['product_detail_1'] = body.xpath(self.rules.filters['fproduct_detail_1']['0']).extract()
+            item['parameter2'] = body.xpath(self.rules.filters['parameter2']['0']).extract()
+            item['canshu'] = body.xpath(self.rules.filters['canshu']['0']).extract()
+            item['promises'] = body.xpath(self.rules.filters['promises']['0']).extract()
+            item['zhengpin'] = body.xpath(self.rules.filters['zhengpin']['0']).extract()
+            item['comment'] = body.xpath(self.rules.filters['comment']['0']).extract()
+
             items.append(item)
+
 
         return items
 

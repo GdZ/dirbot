@@ -1,19 +1,18 @@
 # -*- coding: utf-8 -*-
-
 from scrapy.item import Item, Field
 
 class jd_ITEMS():
 
-    pName = Field()     # 产品名
-    pID= Field() #产品编号
-    bName=Field() #
-    # netWeight=Field() #
-    # chandi=Field() #
-    # shiyongnianlin=Field()
-    # baozhuangdanwei=Field()
-    # peifang=Field()
-    # fenlei=Field()
-    # jinzhong=Field()
-    # duanwei=Field()
-
-
+    root_nav = Field()
+    fenlie=Field()
+    fenglie2=Field()
+    product_intro=Field()
+    spec_n1=Field()
+    p_da=Field()
+    jd_price=Field()
+    product_detail_1=Field()
+    parameter2=Field()
+    canshu=Field()
+    promises=Field()
+    zhengpin=Field()
+    comment=Field()
