@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c103775-4715-47cd-a751-2dc728b1babb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dirbot/spiders/model/dmoz/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dirbot/spiders/model/quarks/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dirbot/spiders/model/dmoz_items.py" afterPath="$PROJECT_DIR$/dirbot/spiders/model/dmoz/items.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dirbot/spiders/model/dmoz_rules.py" afterPath="$PROJECT_DIR$/dirbot/spiders/model/dmoz/rules.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dirbot/spiders/model/quarks_items.py" afterPath="$PROJECT_DIR$/dirbot/spiders/model/quarks/items.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dirbot/spiders/model/quarks_rules.py" afterPath="$PROJECT_DIR$/dirbot/spiders/model/quarks/rules.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dirbot/items.py" afterPath="$PROJECT_DIR$/dirbot/items.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dirbot/spiders/dmoz.py" afterPath="$PROJECT_DIR$/dirbot/spiders/dmoz.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dirbot/spiders/quarks.py" afterPath="$PROJECT_DIR$/dirbot/spiders/quarks.py" />
     </list>
     <ignored path="dirbot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +37,8 @@
       <file leaf-file-name="dmoz.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dirbot/spiders/dmoz.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding>
                 <element signature="e#91#127#0" expanded="true" />
               </folding>
@@ -531,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1463146470877</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="format code">
+      <created>1463147268235</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1463147268235</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -719,8 +717,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dirbot/spiders/dmoz.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="e#91#127#0" expanded="true" />
           </folding>
