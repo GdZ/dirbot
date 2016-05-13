@@ -1,12 +1,19 @@
 # -*- coding: utf-8 -*-
+"""
+scrapy import
+"""
+import scrapy
 from scrapy.spiders import Spider
 from scrapy.selector import Selector
-from dirbot.spiders.model.filter import MYBB_FILTER as mybb_filter
+from dirbot.spiders.action.mybb_action import MYBB_ACTION
 
-import scrapy
-import scrapy.log as Log
+import logging as LOG
 
-class MybbSpider(Spider):
+class MYBB_SPIDER(Spider):
+    """
+    class define.
+    global variables define
+    """
     name = "mybb"
     allowed_domains = ["miyabaobei.hk"]
     start_urls = [
@@ -23,7 +30,8 @@ class MybbSpider(Spider):
         """
 
         selector = Selector(response)
-        Log.logger.debug("create filter..........")
-        items = mybb_filter(selector).arrays
+        LOG.debug("create filter ........")
+        action = MYBB_ACTION()
+        # action.run()
 
-        return items
+        return action.items
