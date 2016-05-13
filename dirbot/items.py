@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from scrapy.item import Item, Field
+from scrapy.item import Item
 
-from dirbot.spiders.model.dmoz_items import DMOZ_ITEMS
-from dirbot.spiders.model.quarks_items import QUARKS_ITEMS
+from dirbot.spiders.model.dmoz.items import DMOZ_ITEMS
+from dirbot.spiders.model.quarks.items import ITEMS
 
 class Website(Item):
     # dmoz variables
@@ -12,7 +12,9 @@ class Website(Item):
     dmoz_url = DMOZ_ITEMS.url
 
     # quarks variables
-    quarks_title = QUARKS_ITEMS.title
-    quarks_link = QUARKS_ITEMS.link
-    quarks_description = QUARKS_ITEMS.description
-    quarks_pubdate = QUARKS_ITEMS.pubDate
+    quarks_title = ITEMS.title
+    quarks_link = ITEMS.link
+    quarks_description = ITEMS.description
+    quarks_pubdate = ITEMS.pubDate
+
+    # dm

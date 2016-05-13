@@ -2,16 +2,16 @@
 """
 this is for dmoz sites samples-testing
 """
-
-from scrapy.spiders import Spider
+#
 from scrapy.selector import Selector
-
-from dirbot.spiders.model.quarks_items import QUARKS_ITEMS
-from dirbot.spiders.model.quarks_rules import QUARKS_RULES
+from scrapy.spiders import Spider
+#
+from dirbot.spiders.model.quarks.rules import RULES
 from dirbot.items import Website
 
+#
 class DmozSpider(Spider):
-    rules = QUARKS_RULES()
+    rules = RULES()
     name = rules.name
     allowed_domains = rules.allowed_domains
     start_urls = rules.start_urls

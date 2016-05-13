@@ -2,20 +2,21 @@
 """
 this is for dmoz sites samples-testing
 """
-
-from scrapy.spiders import Spider
+# scrapy system lib
 from scrapy.selector import Selector
-
-# from dirbot.spiders.model.dmoz_items import DMOZ_ITEMS
-from dirbot.spiders.model.dmoz_rules import DMOZ_RULES
+from scrapy.spiders import Spider
+# self define lib
+from dirbot.spiders.model.dmoz.rules import RULES
 from dirbot.items import Website
 
+# class define
 class DmozSpider(Spider):
-    rules = DMOZ_RULES()
+    rules = RULES()
     name = rules.name
     allowed_domains = rules.allowed_domains
     start_urls = rules.start_urls
 
+    # parse function define
     def parse(self, response):
         """
         The lines below is a spider contract. For more info see:
