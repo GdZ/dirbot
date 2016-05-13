@@ -11,8 +11,22 @@ class jd_RULES():
 
     ]
     filters = {
-      ## 'root': {'0':'//ul[@class="directory-url"]/li', '1': ''},
-        'root': {'0': '//ul[@class="p-parameter"]/li', '1': ''},
+        # 'root': {'0': '//ul[@class="p-parameter"]/li', '1': ''},
+        # alles infomationen
+        'boby': {'0': '//boby', '1':''},
+        # root-nav
+        'root-nav': {'0':'', '1':''},
+        # 1. product-intro
+        'product-intro': {'0':'div/@id="product-intro"', '1':''},
+        # 1.1. spec-nl
+        'spec-n1': {'0':'', '1':''},
+        '': {'0':'', '1':''},
+        # 2.
+        '': {'0':'', '1':''},
+        '': {'0':'', '1':''},
+        # 3.
+        '': {'0':'', '1':''},
+        '': {'0':'', '1':''},
         'pname': {'0':'li/@title()', '1':''},
         'pID': {'0':'li/@title()', '1': ''},
         'bName': {'0':'li/@title()', '1': ''},
