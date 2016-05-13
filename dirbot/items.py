@@ -4,6 +4,7 @@ from scrapy.item import Item, Field
 
 from dirbot.spiders.model.dmoz_items import DMOZ_ITEMS
 
+
 class Website(Item):
 
     name = DMOZ_ITEMS.name
