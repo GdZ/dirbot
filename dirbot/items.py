@@ -16,5 +16,3 @@ class Website(Item):
     quarks_link = QUARKS_ITEMS.link
     quarks_description = QUARKS_ITEMS.description
     quarks_pubdate = QUARKS_ITEMS.pubDate
-
-
