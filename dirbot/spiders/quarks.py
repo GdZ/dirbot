@@ -6,11 +6,12 @@ this is for dmoz sites samples-testing
 from scrapy.spiders import Spider
 from scrapy.selector import Selector
 
-from dirbot.spiders.model.dmoz.rules import DMOZ_RULES
+from dirbot.spiders.model.quarks.rules import QUARKS_RULES
 from dirbot.items import Website
 
-class DmozSpider(Spider):
-    rules = DMOZ_RULES()
+
+class QuarksSpider(Spider):
+    rules = QUARKS_RULES()
     name = rules.name
     allowed_domains = rules.allowed_domains
     start_urls = rules.start_urls
@@ -30,10 +31,12 @@ class DmozSpider(Spider):
 
         for site in sites:
             item = Website()
-            item['dmoz_name'] = site.xpath(self.rules.filters['name']['0']).extract()
-            item['dmoz_url'] = site.xpath(self.rules.filters['url']['0']).extract()
-            item['dmoz_description'] = site.xpath(self.rules.filters['description']['0'])\
+            # item['name'] = site.xpath('a/text()').extract()
+            item['quarks_title'] = site.xpath(self.rules.filters['title']['0']).extract()
+            item['quarks_link'] = site.xpath(self.rules.filters['link']['0']).extract()
+            item['quarks_description'] = site.xpath(self.rules.filters['description']['0'])\
                 .re(self.rules.filters['description']['1'])
+            # item['quarks_pubdate'] = site.xpath(self.rules.filters['pubDate']['0'])
             items.append(item)
 
         return items
