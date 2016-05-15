@@ -6,8 +6,7 @@ this is for dmoz sites samples-testing
 from scrapy.spiders import Spider
 from scrapy.selector import Selector
 
-# from dirbot.spiders.model.dmoz_items import DMOZ_ITEMS
-from dirbot.spiders.model.dmoz_rules import DMOZ_RULES
+from dirbot.spiders.model.dmoz.rules import DMOZ_RULES
 from dirbot.items import Website
 
 class DmozSpider(Spider):
