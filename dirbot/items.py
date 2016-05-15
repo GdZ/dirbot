@@ -3,7 +3,7 @@ from scrapy.item import Item
 
 from dirbot.spiders.model.dmoz.items import DMOZ_ITEMS
 from dirbot.spiders.model.quarks.items import QUARKS_ITEMS
-from dirbot.spiders.model.jd_items import jd_ITEMS
+from dirbot.spiders.model.jd.items import jd_ITEMS
 from dirbot.spiders.model.dw.items import DW_ITEMS
 
 
