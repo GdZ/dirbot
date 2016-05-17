@@ -7,6 +7,7 @@ from dirbot.spiders.model.jd.items import jd_ITEMS
 from dirbot.spiders.model.dw.items import DW_ITEMS
 
 
+
 class Website(Item):
     # dmoz variables
     dmoz_name = DMOZ_ITEMS.name
