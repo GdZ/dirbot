@@ -3,6 +3,7 @@
 this is for dmoz sites samples-testing
 """
 # scrapy system lib
+from scrapy.spiders import Spider
 from scrapy.selector import Selector
 
 from dirbot.spiders.model.dmoz.rules import DMOZ_RULES
@@ -10,7 +11,7 @@ from dirbot.items import Website
 
 # class define
 class DmozSpider(Spider):
-    rules = RULES()
+    rules = DMOZ_RULES()
     name = rules.name
     allowed_domains = rules.allowed_domains
     start_urls = rules.start_urls

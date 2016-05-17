@@ -2,7 +2,7 @@
 
 from scrapy.item import Item, Field
 
-class ITEMS():
+class DMOZ_ITEMS():
 
     name = Field()
     description = Field()

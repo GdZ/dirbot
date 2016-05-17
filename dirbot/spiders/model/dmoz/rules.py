@@ -2,7 +2,7 @@
 
 from scrapy.item import Item, Field
 
-class RULES():
+class DMOZ_RULES():
     name = "dmoz"
     allowed_domains = ["dmoz.org"]
     start_urls = [

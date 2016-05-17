@@ -2,7 +2,7 @@
 
 from scrapy.item import Item, Field
 
-class ITEMS():
+class QUARKS_ITEMS():
 
     title = Field()
     link = Field()

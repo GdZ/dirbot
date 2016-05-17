@@ -2,7 +2,8 @@
 """
 this is for dmoz sites samples-testing
 """
-#
+
+from scrapy.spiders import Spider
 from scrapy.selector import Selector
 
 from dirbot.spiders.model.quarks.rules import QUARKS_RULES

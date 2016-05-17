@@ -2,7 +2,7 @@
 
 from scrapy.item import Item, Field
 
-class RULES():
+class QUARKS_RULES():
     name = "quarks"
     allowed_domains = ["podcast.wdr.de"]
     start_urls = [
