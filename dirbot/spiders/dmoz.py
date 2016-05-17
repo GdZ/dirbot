@@ -4,9 +4,8 @@ this is for dmoz sites samples-testing
 """
 # scrapy system lib
 from scrapy.selector import Selector
-from scrapy.spiders import Spider
-# self define lib
-from dirbot.spiders.model.dmoz.rules import RULES
+
+from dirbot.spiders.model.dmoz.rules import DMOZ_RULES
 from dirbot.items import Website
 
 # class define
