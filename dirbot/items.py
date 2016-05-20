@@ -7,7 +7,7 @@ from dirbot.spiders.model.jd.jdbc.items import jdbc_ITEMS
 from dirbot.spiders.model.jd.jdxiangzi.items import jdxiangzi_ITEMS
 from dirbot.spiders.model.jd.milch.items import jd_ITEMS
 from dirbot.spiders.model.quarks.items import QUARKS_ITEMS
-
+from dirbot.spiders.model.tmall_com.naiFen.items import TMALL_NAIFEN_ITEMS
 
 class Website(Item):
     # dmoz variables
@@ -73,4 +73,8 @@ class Website(Item):
     jdxiangzi_promises = jdxiangzi_ITEMS.promises
     jdxiangzi_zhengpin = jdxiangzi_ITEMS.zhengpin
     jdxiangzi_comment = jdxiangzi_ITEMS.comment
+
+    # tmall
+    # naiFen
+    tmall_naifen_root_nav = TMALL_NAIFEN_ITEMS.root_nav
 
