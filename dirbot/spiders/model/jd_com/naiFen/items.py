@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from scrapy.item import Item, Field
 
-class jd_ITEMS():
+class JDNF_ITEMS():
 
     root_nav = Field()
     fenlie=Field()

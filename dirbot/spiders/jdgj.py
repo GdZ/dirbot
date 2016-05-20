@@ -6,12 +6,12 @@ from scrapy.selector import Selector
 from scrapy.spiders import Spider
 
 # local rules
-from dirbot.spiders.model.jd_com.babyCare.rules import JDBC_RULES
+from dirbot.spiders.model.jd_com.guoJu.rules import JDGJ_RULES
 from dirbot.items import Website
 
 
-class JDBCSpider(Spider):
-    rules = JDBC_RULES()
+class JDGJSpider(Spider):
+    rules = JDGJ_RULES()
     name = rules.name
     allowed_domains = rules.allowed_domains
     start_urls = rules.start_urls
@@ -37,22 +37,22 @@ class JDBCSpider(Spider):
             item = Website()
             # item['name'] = site.xpath('a/text()').extract()
             # jd_root_nav
-            item['jdbc_root_nav'] = body.xpath(self.rules.filters['root_nav']['0']).extract()
+            item['jdgj_root_nav'] = body.xpath(self.rules.filters['root_nav']['0']).extract()
             ## this two need not to two variables, because 'jd_root_nav' is a array
             #item['jd_fenlie'] = body.xpath(self.rules.filters['fenlie']['0']).extract()
             #item['jd_fenglie2'] =body.xpath(self.rules.filters['fenglie2']['0']).extract()
 
             # jd_product_intro
             # item['jd_product_intro'] = body.xpath(self.rules.filters['product_intro']['0'])
-            item['jdbc_spec_n1'] = body.xpath(self.rules.filters['spec_n1']['0']).extract()
+            item['jdgj_spec_n1'] = body.xpath(self.rules.filters['spec_n1']['0']).extract()
             ## this rules'jd_p_ad' is right, but cannot select. I don't know why
-            item['jdbc_p_ad'] = body.xpath(self.rules.filters['p_ad']['0']).extract()
+            item['jdgj_p_ad'] = body.xpath(self.rules.filters['p_ad']['0']).extract()
 
             ## this rules'jd_jd_price' is right, but cannot select. I don't know why
-            item['jdbc_jd_price'] = body.xpath(self.rules.filters['jd_price']['0']).extract()
+            item['jdgj_jd_price'] = body.xpath(self.rules.filters['jd_price']['0']).extract()
             #item['jd_product_detail_1'] = body.xpath(self.rules.filters['product_detail_1']['0'])
             #item['jd_parameter2'] = body.xpath(self.rules.filters['parameter2']['0'])
-            item['jdbc_canshu'] = body.xpath(self.rules.filters['canshu']['0']).extract()
+            item['jdgj_canshu'] = body.xpath(self.rules.filters['canshu']['0']).extract()
 
             # jd_promises
             #item['jd_promises'] = body.xpath(self.rules.filters['promises']['0'])
