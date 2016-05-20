@@ -2,11 +2,11 @@
 """
 this is for dmoz sites samples-testing
 """
-from scrapy.spiders import Spider
 from scrapy.selector import Selector
+from scrapy.spiders import Spider
 
-from dirbot.spiders.model.jd.rules import jd_RULES
 from dirbot.items import Website
+from dirbot.spiders.model.jd.milch.rules import jd_RULES
 
 
 class jdSpider(Spider):

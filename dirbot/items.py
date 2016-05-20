@@ -2,10 +2,11 @@
 from scrapy.item import Item
 
 from dirbot.spiders.model.dmoz.items import DMOZ_ITEMS
-from dirbot.spiders.model.quarks.items import QUARKS_ITEMS
-from dirbot.spiders.model.jd.items import jd_ITEMS
 from dirbot.spiders.model.dw.items import DW_ITEMS
-
+from dirbot.spiders.model.jd.jdbc.items import jdbc_ITEMS
+from dirbot.spiders.model.jd.jdxiangzi import jdxiangzi_ITEMS
+from dirbot.spiders.model.jd.milch.items import jd_ITEMS
+from dirbot.spiders.model.quarks.items import QUARKS_ITEMS
 
 
 class Website(Item):
@@ -47,7 +48,7 @@ class Website(Item):
     jdbc_fenglie2 = jdbc_ITEMS.fenglie2
     jdbc_product_intro = jdbc_ITEMS.product_intro
     jdbc_spec_n1 = jdbc_ITEMS.spec_n1
-    jdbc_p_ad = jbcd_ITEMS.p_ad
+    jdbc_p_ad = jd_ITEMS.p_ad
     jdbc_jd_price = jdbc_ITEMS.jd_price
     jdbc_choose = jdbc_ITEMS.choose
     jdbc_choose2 =jdbc_ITEMS.choose2
