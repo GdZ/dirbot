@@ -2,11 +2,12 @@
 
 from scrapy.item import Item, Field
 
-class jdbc_RULES():
-    name = "jdbc"
+class JDHZ_RULES():
+    name = "huaZhuang"
+    #hushoushuang
     allowed_domains = ["jd.com"]
     start_urls = [
-        "http://item.jd.com/1765933470.html"
+        "http://item.jd.com/10089737996.html"
     ]
     filters = {
         # 'root': {'0': '//ul[@class="p-parameter"]/li', '1': ''},
@@ -25,7 +26,7 @@ class jdbc_RULES():
         #promotiion information
         'p_ad': {'0': '//div[@id="p-ad"]/text()', '1': ''},
         # 1.2 price
-        'jd_price': {'0':'//strong[@id="jd-price"]/text()', '1': ''},
+        'jd_price': {'0':'//strong[@id="jd_com-price"]/text()', '1': ''},
         # choose product variables
         'choose': {'0': '//div[@id="choose"]/div/div/*/a/text()', '1': ''},
         'choose2': {'0': '//div[@class="item"]/*/a/text()', '1': ''},

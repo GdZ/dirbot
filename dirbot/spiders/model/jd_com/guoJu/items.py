@@ -2,8 +2,8 @@
 
 from scrapy.item import Item, Field
 
-
-class jdbc_ITEMS():
+#guoju
+class JDGJ_ITEMS():
     root_nav = Field()
     fenlie = Field()
     fenglie2 = Field()

@@ -6,12 +6,11 @@ from scrapy.selector import Selector
 from scrapy.spiders import Spider
 
 # local rules
-from dirbot.spiders.model.jd_com.babyCare.rules import JDBC_RULES
+from dirbot.spiders.model.jd_com.xie.rules import jdxie_RULES
 from dirbot.items import Website
 
-
-class JDBCSpider(Spider):
-    rules = JDBC_RULES()
+class jdxieSpider(Spider):
+    rules = jdxie_RULES()
     name = rules.name
     allowed_domains = rules.allowed_domains
     start_urls = rules.start_urls
