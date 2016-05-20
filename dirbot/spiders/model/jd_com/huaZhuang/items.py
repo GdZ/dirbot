@@ -3,7 +3,7 @@
 from scrapy.item import Item, Field
 
 
-class jdbc_ITEMS():
+class JDHZ_ITEMS():
     root_nav = Field()
     fenlie = Field()
     fenglie2 = Field()

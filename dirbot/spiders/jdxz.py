@@ -6,7 +6,7 @@ from scrapy.selector import Selector
 from scrapy.spiders import Spider
 
 from dirbot.items import Website
-from dirbot.spiders.model.jd.jdxiangzi.rules import jdxiangzi_RULES
+from dirbot.spiders.model.jd_com.xiangZi.rules import jdxiangzi_RULES
 
 
 class jdxiangziSpider(Spider):
